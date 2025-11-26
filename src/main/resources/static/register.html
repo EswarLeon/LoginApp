@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Register</h2>
+
+    <input id="email" type="email" placeholder="Enter Email">
+
+    <!-- password box + eye icon -->
+    <div class="password-box">
+        <input id="password" type="password" placeholder="Enter Password">
+        <span class="toggle" onclick="togglePassword()">
+        <img src="eye.svg" class="eye-icon" id="eyeIcon">
+    </span>
+    </div>
+
+    <div class="password-box">
+        <input id="confirm" type="password" placeholder="Confirm Password">
+        <span class="toggle" onclick="togglePassword()">
+        <img src="eye.svg" class="eye-icon" id="eyeIcon2">
+    </span>
+    </div>
+
+
+    <button onclick="register()">Register</button>
+
+    <button class="login-btn" onclick="window.location.href='login.html'">
+        Login
+    </button>
+
+    <p id="msg"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

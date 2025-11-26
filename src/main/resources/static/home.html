@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Welcome to Home Page!</h2>
+    <button onclick="logout()">Logout</button>
+
+    <p id="msg"></p>
+</div>
+
+<script>
+    fetch("/page/home")
+      .then(response => {
+        if (!response.ok) {
+          window.location.href = "/login.html"; // redirect if not logged in
+        }
+      });
+
+    async function logout() {
+    await fetch("/page/logout", { method: "POST" });
+    window.location.href = "/login.html";
+}
+</script>
+</body>
+</html>
